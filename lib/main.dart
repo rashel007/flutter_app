@@ -51,27 +51,46 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: Text('Home')),
-        body: Row(
+        body: ListView(
           children: <Widget>[
-            Container(
-              margin: EdgeInsets.only(left: 20, top: 20),
-              padding: EdgeInsets.all(10.0),
-              height: 50,
-              width: 60,
-              decoration: BoxDecoration(
-                  color: Colors.amberAccent,
-                  borderRadius: BorderRadius.circular(8.0)),
-            ),
-            Container(
-              margin: EdgeInsets.only(left: 20, top: 20),
-              padding: EdgeInsets.all(10.0),
-              height: 50,
-              width: 60,
-              decoration: BoxDecoration(
-                  color: Colors.amberAccent,
-                  borderRadius: BorderRadius.circular(8.0)),
+            Column(
+              children: <Widget>[
+                Image.asset("assets/images/flutter.png"),
+                Container(
+                  margin: EdgeInsets.all(10),
+                  child: Text(
+                    "Flutter is an open-source UI software development kit created by Google. It is used to develop applications for Android, iOS, Windows, Mac, Linux, Google Fuchsia and the web. The first version of Flutter was known as codename \"Sky\" and ran on the Android operating system"
+                    , textAlign: TextAlign.justify,
+                  ),
+                ),
+                Row(
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.only(left: 10, top: 10),
+                      padding: EdgeInsets.all(5.0),
+                      height: 50,
+                      width: 60,
+                      child: Icon(Icons.airline_seat_flat),
+                      decoration: BoxDecoration(
+                          color: Colors.amberAccent,
+                          borderRadius: BorderRadius.circular(8.0)),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 10, top: 10),
+                      padding: EdgeInsets.all(5.0),
+                      height: 50,
+                      width: 60,
+                      child: Icon(Icons.accessibility),
+                      decoration: BoxDecoration(
+                          color: Colors.amberAccent,
+                          borderRadius: BorderRadius.circular(8.0)),
+                    )
+                  ],
+                )
+              ],
             )
           ],
-        ));
+        )
+       );
   }
 }
